@@ -1,21 +1,26 @@
 name: Deploy to GitHub Pages
 
- non: this workflow deploys the site to the gh-pages branch on push to main
-
 on:
   push:
     branches: [ "main" ]
 
+permissions:
+  pages: write
+  id-token: write
+  contents: read
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    name: Build and deploy
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
-          publish_branch: gh-pages
+          path: ./
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
