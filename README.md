@@ -1,6 +1,10 @@
+[![Deploy to Pages](https://github.com/SarveshParab3108/stopwatch-webapp/actions/workflows/deploy.yml/badge.svg)](https://github.com/SarveshParab3108/stopwatch-webapp/actions)
+
 # Stopwatch (Static Web App)
 
 A simple stopwatch built with plain HTML, CSS and JavaScript. This repo is set up to be published to GitHub Pages.
+
+Live demo: https://SarveshParab3108.github.io/stopwatch-webapp/
 
 Features
 - Start / Stop / Lap / Reset controls
