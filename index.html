@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stopwatch</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="wrap">
+    <h1>Stopwatch</h1>
+
+    <section class="stopwatch">
+      <div id="display" class="display">00:00.00</div>
+
+      <div class="controls">
+        <button id="startBtn" class="btn primary">Start</button>
+        <button id="lapBtn" class="btn" disabled>Lap</button>
+        <button id="resetBtn" class="btn" disabled>Reset</button>
+      </div>
+
+      <ol id="laps" class="laps" aria-live="polite"></ol>
+    </section>
+
+    <section class="connect">
+      <h2>GitHub</h2>
+      <p>This project is designed to be published to GitHub Pages. See the README for instructions to create a repository, connect, and publish.</p>
+      <a id="openReadme" href="README.md" class="btn muted">Open README</a>
+    </section>
+
+    <footer>
+      <small>Keyboard: <strong>Space</strong> = Start/Stop, <strong>L</strong> = Lap, <strong>R</strong> = Reset</small>
+    </footer>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
